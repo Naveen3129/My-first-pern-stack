@@ -8,6 +8,7 @@ const EditTodo = ({todo})=>{
     const updateDescription =async() =>{
         try {
             const body ={description};
+            // eslint-disable-next-line
             const response = await fetch(`http://localhost:3001/todos/${todo.todo_id}`,{
                 method:"PUT",
                 headers:{ "Content-Type": "application/json"},
